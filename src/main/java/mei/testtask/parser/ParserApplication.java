@@ -1,15 +1,16 @@
 package mei.testtask.parser;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.Optional;
 
 @SpringBootApplication
 public class ParserApplication {
 
     public static void main(final String[] args) {
-        Optional.ofNullable(args[0]).ifPresent(arg -> System.setProperty("fileName", arg));
+        if (!ArrayUtils.isEmpty(args)) {
+            System.setProperty("fileName", args[0]);
+        }
         SpringApplication.run(ParserApplication.class, args);
     }
 

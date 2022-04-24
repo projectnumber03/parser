@@ -1,6 +1,5 @@
 package mei.testtask.parser;
 
-import mei.testtask.parser.component.aspect.DataBaseAspect;
 import mei.testtask.parser.component.processor.persistence.FactQliqDataPersistenceProcessor;
 import mei.testtask.parser.component.processor.persistence.FactQoilDataPersistenceProcessor;
 import mei.testtask.parser.component.processor.persistence.ForecastQliqDataPersistenceProcessor;
@@ -12,9 +11,7 @@ import mei.testtask.parser.service.ParsedDataService;
 import mei.testtask.parser.service.XlsxParser;
 import org.apache.commons.codec.Resources;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
-import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -33,10 +30,6 @@ class ParserTest {
 
     @MockBean
     private ParsedDataRepository repository;
-
-    @Spy
-    @InjectMocks
-    private DataBaseAspect dataBaseAspect;
 
     @MockBean
     private ParsedDataService parsedDataService;

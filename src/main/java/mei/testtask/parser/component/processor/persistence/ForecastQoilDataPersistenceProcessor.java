@@ -1,10 +1,10 @@
 package mei.testtask.parser.component.processor.persistence;
 
+import mei.testtask.parser.model.db.ForecastQoilData;
 import mei.testtask.parser.model.db.IParsedData;
 import mei.testtask.parser.model.dto.IndicationInfo;
 import mei.testtask.parser.model.dto.MainInfo;
 import mei.testtask.parser.model.dto.Q;
-import mei.testtask.parser.model.db.ForecastQoilData;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;

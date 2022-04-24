@@ -9,5 +9,5 @@ public interface IRandomDateAspect {
     void callAtDataBaseAspectAfterReturning();
 
     @AfterReturning(pointcut = "callAtDataBaseAspectAfterReturning()", returning = "result")
-    IParsedData afterReturningCallAt(IParsedData result);
+    IParsedData afterReturningCallAt(final IParsedData result);
 }

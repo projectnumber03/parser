@@ -8,8 +8,6 @@ import java.io.InputStream;
 
 public interface IParser {
 
-    <T extends MainInfo> IParsedData parse(InputStream is, Class<T> clazz) throws ParsingErrorException;
-
     <T extends MainInfo> IParsedData parse(InputStream is) throws ParsingErrorException;
 
 }

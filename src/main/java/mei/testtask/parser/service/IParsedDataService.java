@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IParsedDataService {
 
-    void saveAll(List<IParsedData> data);
+    void saveAll(final List<IParsedData> data);
 
 }

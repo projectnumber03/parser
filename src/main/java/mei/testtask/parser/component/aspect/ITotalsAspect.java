@@ -10,6 +10,6 @@ public interface ITotalsAspect {
     void callAtDataBaseAspectAfterReturning();
 
     @AfterReturning(pointcut = "callAtDataBaseAspectAfterReturning()", returning = "result")
-    IParsedData afterReturningCallAt(IParsedData result);
+    IParsedData afterReturningCallAt(final IParsedData result);
 
 }

@@ -1,10 +1,10 @@
 package mei.testtask.parser.component.processor.persistence;
 
+import mei.testtask.parser.model.db.FactQliqData;
 import mei.testtask.parser.model.db.IParsedData;
 import mei.testtask.parser.model.dto.IndicationInfo;
 import mei.testtask.parser.model.dto.MainInfo;
 import mei.testtask.parser.model.dto.Q;
-import mei.testtask.parser.model.db.FactQliqData;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 

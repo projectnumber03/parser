@@ -42,7 +42,11 @@ public class XlsxParser implements IParser {
     int sheetNumber;
 
     @Override
-    public <T extends MainInfo> IParsedData parse(final InputStream is, final Class<T> clazz) throws ParsingErrorException {
+    public <T extends MainInfo> IParsedData parse(final InputStream is) throws ParsingErrorException {
+        return parse(is, MainInfo.class);
+    }
+
+    private <T extends MainInfo> IParsedData parse(final InputStream is, final Class<T> clazz) throws ParsingErrorException {
         try (is; final XSSFWorkbook wb = new XSSFWorkbook(is)) {
             final XSSFSheet sheet = wb.getSheetAt(sheetNumber);
             final List<T> mainInfos = StreamSupport.stream(sheet.spliterator(), false)
@@ -57,11 +61,6 @@ public class XlsxParser implements IParser {
             log.error("parsing error", e);
             throw new ParsingErrorException();
         }
-    }
-
-    @Override
-    public <T extends MainInfo> IParsedData parse(final InputStream is) throws ParsingErrorException {
-        return parse(is, MainInfo.class);
     }
 
 }
